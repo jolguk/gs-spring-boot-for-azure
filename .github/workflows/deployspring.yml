@@ -20,6 +20,7 @@ jobs:
 
       - name: maven build, clean
         run: |
+          cd complete
           mvn clean package
 
       - name: Login via Azure CLI
@@ -35,4 +36,4 @@ jobs:
           service-name: springgit
           app-name: jodemo
           use-staging-deployment: false
-          package: ${{ env.ASC_PACKAGE_PATH }}/complete/*
+          package: ${{ env.ASC_PACKAGE_PATH }}
