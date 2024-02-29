@@ -35,4 +35,4 @@ jobs:
           service-name: springgit
           app-name: jodemo
           use-staging-deployment: false
-          package: ${{ env.ASC_PACKAGE_PATH }}/**/*.jar
+          package: ${{ github.workspace }}
